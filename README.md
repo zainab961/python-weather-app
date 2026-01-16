@@ -10,6 +10,10 @@ Python
 Tkinter (GUI)
 Requests (API requests)
 OpenWeather API
+Error Handling
+Shows warning if city field is empty
+Displays an error if the city is not found
+Prevents crashes due to invalid input
 How to Run
 Install Python 3.x
 Install dependencies:
