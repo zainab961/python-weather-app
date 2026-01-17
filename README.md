@@ -16,8 +16,22 @@ Displays an error if the city is not found
 Prevents crashes due to invalid input
 How to Run
 Install Python 3.x
+OpenWeather API key (free)
+### Install Required Packages
+Run the following command in your project directory:
+pip install requests python-dotenv
+API Key Setup
+Create a file named .env in the project folder
+Add your OpenWeather API key inside the file:
+write:
+OPENWEATHER_API_KEY=your_api_key_here
+Run the Application
+Execute the Python script:
+write in command prompt python weather.py
+Enter a city name
+Click Get Weather
+View the current temperature, weather condition, and today’s high and low
 Install dependencies:
 pip install requests python-dotenv
 Run the app:
 python weather.py
-Enter a city name and click Get Weather
