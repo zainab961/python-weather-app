@@ -1,16 +1,19 @@
 import requests
+import os
+from dotenv import load_dotenv
 import tkinter as tk
 from tkinter import messagebox
+load_dotenv()
 
-API_KEY = 'a4cee5d4a8644b232c1005b1aeaf80eb'
+api_key = os.getenv("OPENWEATHER_API_KEY")
 
 def get_weather():
     city = city_entry.get()
-    if not city:
+    if not city: 
         messagebox.showwarning("Input Error", "Enter a city name")
         return
 
-    url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid={API_KEY}"
+    url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid={api_key}"
     response = requests.get(url)
     data = response.json()
 
